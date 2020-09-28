@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">midlab</string>
+    <string-array name="SelectSize_array">
+        <item>Select Size</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+    </string-array>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:text="BlackPink "/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textid"
+        android:text="Name :"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="-1dp"/>
+
+    <EditText
+        android:id="@+id/nameEDT"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textid"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/name"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:text="  Gender : "
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/gender"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/nameEDT">
+
+        <RadioButton
+            android:id="@+id/inputMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Male"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/inputFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Female"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/radioGroup"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/gender"
+        android:layout_alignEnd="@+id/name"
+        android:paddingLeft="20dp"
+        android:text="  Date :"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-17dp"/>
+
+    <EditText
+        android:id="@+id/emailEDT"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toRightOf="@+id/Date"
+        android:textSize="20sp"
+        android:inputType="date"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Date"
+        android:text="  Zone :"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"/>
+    <Spinner
+        android:id="@+id/spiner_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/salary"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_below="@+id/emailEDT">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/Number_Zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/salary"
+        android:layout_marginTop="22dp"
+        android:paddingLeft="20dp"
+        android:text="Number Zone :"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/numberEDT"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spiner_subject"
+        android:layout_toRightOf="@+id/Date"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="8dp"/>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:text="Submit"
+        android:layout_marginTop="53dp"
+        android:background="#00FF19"
+        android:layout_below="@+id/Number_Zone"
+        android:onClick="onClickShowDetail"/>
+    <Button
+        android:id="@+id/btnreset"
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_marginTop="48dp"
+        android:text="RESET"
+        android:background="#FF00FF"
+        android:layout_below="@+id/numberEDT"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:onClick="reset"/>
+</RelativeLayout>
